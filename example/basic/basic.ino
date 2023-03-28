@@ -1,12 +1,12 @@
 // SPDX-FileCopyrightText: 2023 Kota Meiwa
 // SPDX-License-Identifier: MIT
 
-#include <WS2812B_Spresense.h>
+#include <Adafruit_NeoPixel_Spresense.h>
 
 const uint16_t NUM_PIXELS = 16;
 const uint16_t PIN = 6;
 
-CWS2812B_Spresense neopixel(NUM_PIXELS, PIN);
+Adafruit_NeoPixel_Spresense neopixel(NUM_PIXELS, PIN);
 
 void setup()
 {
