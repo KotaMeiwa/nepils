@@ -6,13 +6,11 @@
 Main class in this library, *Adafruit_NeoPixel_Spresense* is inherited class of *Adafruit_NeoPixel* in adafruit / Adafruit_NeoPixel therefore *Adafruit_NeoPixel_Spresense* has same methods as *Adafruit_NeoPixel*.
 
 ## Version history
----
 | Version #     | Release date  | Changes          |
 | ---           | ---           | ---              |
 | Ver. 0.1.0    | 2023-03-31    | First release    |
 
 ## Installation
----
 ### For HW connection
 [Here](https://www.marutsu.co.jp/pc/static/large_order/WS2812B_0124) ( (c) Marutsuelec Co.,Ltd. All Rights Reserved. ) is good reference to understand HW connection.
 
@@ -41,7 +39,6 @@ Next, installation of this library. Same operation of above installation.
 1. In the Arduino IDE, go to the menu "Sketch > Include Library > Add .ZIP Library"
 
 ## API
----
 Main class in this library, *Adafruit_NeoPixel_Spresense* is inherited class of *Adafruit_NeoPixel* in adafruit / Adafruit_NeoPixel therefore *Adafruit_NeoPixel_Spresense* has same methods as *Adafruit_NeoPixel*.
 
 additional API for *Adafruit_NeoPixel*
@@ -57,17 +54,14 @@ the following API is disabled
 - *void updateType(neoPixelType t)*
 
 ## Supported Arduino board
----
 [Sony Spresense](https://developer.sony.com/develop/spresense/)
 
 As for other Arduino board, use just [adafruit / Adafruit_NeoPixel](https://github.com/adafruit/Adafruit_NeoPixel).
 
 ## License
----
 This software is distributed under MIT license, in detail see also [LICENSE](/LICENSE).
 
 ## Copyright
----
 Copyright (c) 2023 Kota Meiwa
 
 To implement the following methods, [hideakitai/SpresenseNeoPixel](https://github.com/hideakitai/SpresenseNeoPixel) (under MIT license, Copyright (c) 2019 Hideaki Tai) was great reference and some portion of the source code is active in the following methods. I'm grateful to meet amazing library!
