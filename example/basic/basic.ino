@@ -10,12 +10,12 @@ Adafruit_NeoPixel_Spresense neopixel(NUM_PIXELS, PIN);
 
 void setup()
 {
-    Serial.begin(115200);
-    delay(1000);
+	Serial.begin(115200);
+	delay(1000);
 
-  neopixel.begin();
+	neopixel.begin();
 
-  Serial.println("serial console start!");
+	Serial.println("serial console start!");
 }
 
 void loop()
