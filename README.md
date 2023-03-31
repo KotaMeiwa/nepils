@@ -1,7 +1,7 @@
 # nepils
 **Ne**o**Pi**xel **L**ibrary for **S**presense, it's supplement library for [adafruit / Adafruit_NeoPixel](https://github.com/adafruit/Adafruit_NeoPixel).
 
-(I think) adafruit / Adafruit_NeoPixel is most famous library to control NeoPixel LED strap on Arduino platform. But as of Mar/2023 it doesn't work with Sony Spresense platform.
+(I think) adafruit / Adafruit_NeoPixel is most famous library to control NeoPixel LED strap on Arduino platform. But as of Mar/2023 it doesn't work with [Sony Spresense](https://developer.sony.com/develop/spresense/) platform. This library enables you to enjoy LED strap with Sony Spresense!
 
 Main class in this library, *Adafruit_NeoPixel_Spresense* is inherited class of *Adafruit_NeoPixel* in adafruit / Adafruit_NeoPixel therefore *Adafruit_NeoPixel_Spresense* has same methods as *Adafruit_NeoPixel*.
 
