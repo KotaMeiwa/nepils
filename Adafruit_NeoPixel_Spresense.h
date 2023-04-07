@@ -12,7 +12,7 @@ class Adafruit_NeoPixel_Spresense : public Adafruit_NeoPixel
 {
 private:
 	volatile uint32_t* m_reg_addr;
-	uint32_t m_reg_val;
+	uint32_t m_reg_val_high, m_reg_val_low;
 	uint8_t m_rgb_max;
 	const uint32_t m_wait_cycles_reset;
 
@@ -37,20 +37,19 @@ protected:
 	inline uint8_t get_pixel_size(){ return (wOffset == rOffset? 3: 4); }
 
 	inline void write_bit_off(){
-		const uint32_t wait_time[] = {1, 28};
-		write(HIGH), wait_cycles(wait_time[0]);
-		write(LOW), wait_cycles(wait_time[1]);
+		const uint32_t wait_time[] = {10, 21};
+		*m_reg_addr = m_reg_val_high, wait_cycles(wait_time[0]);
+		*m_reg_addr = m_reg_val_low, wait_cycles(wait_time[1]);
 	}
 
 	inline void write_bit_on(){
-		const uint32_t wait_time[] = {28, 1};
-		write(HIGH), wait_cycles(wait_time[0]);
-		write(LOW), wait_cycles(wait_time[1]);
+		const uint32_t wait_time[] = {25, 6};
+		*m_reg_addr = m_reg_val_high, wait_cycles(wait_time[0]);
+		*m_reg_addr = m_reg_val_low, wait_cycles(wait_time[1]);
 	}
 
 	inline void write(uint8_t value){
-		bitWrite(m_reg_val, GPIO_OUTPUT_SHIFT, value);
-		*m_reg_addr = m_reg_val;
+		*m_reg_addr = (value==LOW? m_reg_val_low: m_reg_val_high);
 	}
 
 	inline void wait_cycles(uint32_t n){ // 4 clocks per cycle
