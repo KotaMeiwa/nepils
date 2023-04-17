@@ -21,6 +21,6 @@ void setup()
 void loop()
 {
 	//Blink
-	neopixel.fill(Adafruit_NeoPixel::Color(64, 16, 0)); neopixel.show(), delay(500);
-	neopixel.fill(Adafruit_NeoPixel::Color(64, 0, 0)); neopixel.show(), delay(500);
+	neopixel.fill(Adafruit_NeoPixel::Color(16, 16, 0)); neopixel.show(), delay(500);
+	neopixel.fill(Adafruit_NeoPixel::Color(16, 0, 0)); neopixel.show(), delay(500);
 }

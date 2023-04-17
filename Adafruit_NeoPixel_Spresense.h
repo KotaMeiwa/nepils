@@ -37,13 +37,13 @@ protected:
 	inline uint8_t get_pixel_size(){ return (wOffset == rOffset? 3: 4); }
 
 	inline void write_bit_off(){
-		const uint32_t wait_time[] = {10, 21};
+		const uint32_t wait_time[] = {10, 1};
 		*m_reg_addr = m_reg_val_high, wait_cycles(wait_time[0]);
 		*m_reg_addr = m_reg_val_low, wait_cycles(wait_time[1]);
 	}
 
 	inline void write_bit_on(){
-		const uint32_t wait_time[] = {25, 6};
+		const uint32_t wait_time[] = {25, 1};
 		*m_reg_addr = m_reg_val_high, wait_cycles(wait_time[0]);
 		*m_reg_addr = m_reg_val_low, wait_cycles(wait_time[1]);
 	}
