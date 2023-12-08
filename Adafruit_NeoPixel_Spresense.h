@@ -33,6 +33,9 @@ public: //diabled super class's method
 	void updateLength(uint16_t n){}
 	void updateType(neoPixelType t){}
 
+	//if no the following directive, calling setPixelColor causes compile error.
+	using Adafruit_NeoPixel::setPixelColor;
+
 protected:
 	inline uint8_t get_pixel_size(){ return (wOffset == rOffset? 3: 4); }
 
